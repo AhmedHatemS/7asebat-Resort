@@ -1,0 +1,120 @@
+.iframeHeader
+{
+    margin-bottom: -5px;
+    width: 100%;
+    height: 17%
+    
+}
+.iframeFooter
+{
+    margin-bottom: -5px;
+    width: 100%;
+    height: 450px
+}
+.parent
+{
+    height: 100%;
+    width: 100%;
+    background-color: floralwhite;
+    opacity: 1;
+}
+.about
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    padding-top: 3%;
+    height: 89.5%;
+    background-color:darkgrey;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+button
+{
+    position: fixed;
+    display:block;
+    font-size: 14px;
+    margin-bottom: 1.5%;
+    padding: 15px;
+    border: 5px solid;
+    background-color: whitesmoke;
+}
+button:focus
+{
+    background-color: navajowhite
+}
+button:focus > span
+{
+    display: none
+}
+#show
+{
+    padding-bottom: 45px;
+    top: 20%;
+    left: 0.55%
+}
+#hide
+{
+    padding-bottom: 30px;
+    top: 27%;
+    left: 1.4%
+}
+#show:focus
+{
+    padding: 15px;
+    padding-bottom: 45px
+}
+#hide:focus
+{
+    padding: 15px;
+    padding-bottom: 30px
+}
+#show:focus::after
+{
+    content: "Info enabled";
+}
+#hide:focus::after
+{
+    content: "Info hidden";
+}
+
+legend
+{
+    border: 5px solid black;
+    margin-left: 30%;
+    padding: 15px;
+    font-family: Lucida Handwriting;
+    font-size: 22px;
+    color: darkred;
+    background-color: floralwhite;
+    border-radius: 5px
+}
+fieldset
+{
+    border: 0px solid black;
+    width: 45%;
+    margin-bottom: 5%;
+    padding-top: 0.5%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: floralwhite;
+    display: inline;
+    border-radius: 10px
+}
+.text
+{
+    width: 100%;
+    height: 60%;
+    padding-left: 5px;
+    padding-top: 2px;
+    border: 0px solid;
+}
+p
+{
+    font-family: Lucida Bright;
+    font-size: 18px;
+    line-height: 60%;
+    color: black
+}
