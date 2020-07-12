@@ -1,0 +1,320 @@
+.iframeHeader
+{
+    margin-bottom: -5px;
+    width: 100%;
+    height: 17%
+    
+}
+.iframeFooter
+{
+    margin-bottom: -5px;
+    width: 100%;
+    height: 460px
+}
+
+body{
+padding:0;
+margin:0;
+font-family: 'Open Sans', sans-serif !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+	
+}	
+p{
+	margin:0;
+
+}
+ul{
+	margin:0;
+	padding:0;
+}
+label{
+	margin:0;
+}
+/*-- main --*/
+.content{
+	padding:50px 0;
+    background-color: darkgray;
+}
+.content h1{
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+	font-family: 'Amaranth', sans-serif;
+}
+.main{
+	width:30%;
+	margin:45px auto;
+	background-color: white;
+	padding:30px 30px;
+    border-radius: 10px;
+    opacity: 0.7
+
+}
+p.footer {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+p.footer a {
+    color: #000;
+	transition:0.5s all;	
+}
+p.footer a:hover {
+    color: #fff;
+	transition:0.5s all;	
+}
+.main form input[type="text"], .main form input[type="email"], .main form input[type="password"] {
+    width: 94%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    color: #D8D5D5;
+    margin-bottom: 30px;
+
+}
+.main h5 {
+    color: #00ad5f;
+    margin-bottom: 8px;
+	font-size:19px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+}
+.main h5 span{
+	font-size:15px;	
+	color:#ccc;
+}
+.main form input[type="text"]:hover,  .main textarea:hover{
+	border: 1px solid #4cc2c4;
+	color:#000;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;
+}
+
+.main form input[type="submit"] {
+    background: #00ad5f;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 0;
+    border: none;
+    border-bottom:4px solid #00ad5f;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 0px;
+	text-transform:capitalize;
+
+}
+.main form input[type="submit"]:hover{
+    background: #000;
+    border-bottom:4px solid #403E3E;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	-ms-transition:0.5s all;	
+}
+ .main textarea {
+    width: 94%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    color: #D8D5D5;
+    margin-bottom: 20px;
+	outline:none;
+	resize:none;
+    height: 100px;
+    font-family: 'Lato', sans-serif !important;
+}
+
+.radio-btns label {
+  font-size: 14px;
+  vertical-align: text-top;
+  margin: 0;
+}
+/*start-checkbox*/
+.checkbox {
+	padding-left: 25px;
+	color: #B6B6B6;
+	cursor: pointer;
+	position:relative;
+	font-size:12px;
+}
+ .checkbox:last-child {
+	margin-bottom: 0;
+}
+.checkbox input {
+	position: absolute;
+	left: -9999px;
+}
+.checkbox i {
+	position: absolute;
+	bottom: 7px;
+	left: 0px;
+	display: block;
+	width: 19px;
+	height: 20px;
+	outline: none;
+  border: 3px solid #00ad5f;
+  background: #fff;
+	border-radius:3px;
+}
+.checkbox input + i:after {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+.checkbox input + i:after {
+	content: '';
+	background: url("images/tick-mark1.png") no-repeat center;
+	top: -6px;
+	left: 0px;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+}
+.form-elements li:nth-child(2) {
+	margin-left: 18px;
+	width: 37%;
+}
+.checkbox input:checked + i:after {
+	opacity: 1;
+}
+.checkbox input:checked + i {
+  border: 3px solid #00ad5f;
+  background: #fff;
+}
+.radio,.radio1,.radio2,.radio3 {
+	position: relative;
+	display:inline-block;
+	margin-left:15px;
+}
+.radio:first-child,.radio1:first-child ,.radio2:first-child,.radio3:first-child{
+	margin-left: 0;
+	margin: 0;
+}
+.radio ,.radio1,.radio2 ,.radio3{
+	padding-left:20px;
+	line-height: 25px;
+	color: #404040;
+	cursor: pointer;
+}
+.radio  input[type="radio"],.radio1  input[type="radio"],.radio2  input[type="radio"],.radio3  input[type="radio"]{
+	position: absolute;
+	left: -9999px;
+}
+.radio-btns label {
+  font-size: 14px;
+  color: #A5A5A5;
+  padding: 0px 0 0 2px;
+  }
+.radio i,.radio1 i,.radio2 i,.radio3 i  {
+	position: absolute;
+    top: 5px;
+    left: 0;
+    display: block;
+    width: 12px;
+    height: 12px;
+    outline: none;
+    border: 3px solid #00ad5f;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.radio input + i:after,.radio1 input + i:after ,.radio2 input + i:after,.radio3 input + i:after {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.1s;
+}
+ .radio input + i:after, .radio1 input + i:after , .radio2 input + i:after, .radio3 input + i:after{
+	content: '';
+	top: 6px;
+	left: 7px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+}
+.radio input:checked + i:after,.radio1 input:checked + i:after,.radio2 input:checked + i:after,.radio3 input:checked + i:after{
+	opacity: 1;
+}
+.check_box {
+    float: left;
+    width: 23%;
+}
+.check_box_one {
+    float: left;
+    width: 31%;
+}
+/*** normal state ***/
+.radio i ,.radio1 i,.radio2 i ,.radio3 i {
+	transition: border-color 0.3s;
+}
+/*** checked state ***/
+.radio input + i:after,.radio1 input + i:after,.radio2 input + i:after,.radio3 input + i:after {
+    content: '';
+    background: url("../images/tick-mark1.png") no-repeat -1px -1px;
+    top: 3px;
+    left: 3px;
+    width: 6.5px;
+    height: 6px;
+    text-align: center;
+    border-radius: 100%;
+}
+.radio input:checked + i ,.radio1 input:checked + i,.radio2 input:checked + i ,.radio3 input:checked + i{
+  border: 3px solid #00ad5f;
+  background: #fff;
+}
+.swit {
+    margin-bottom: 30px;
+}
+span.starRating {
+    margin: 5px 0 30px;
+}
+
+.starRating{
+  display        : inline-block;
+  width          : 7.5em;
+  height         : 1.5em;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+
+.starRating > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('../images/star-off.png');
+  background-size : contain;
+}
+
+.starRating > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('../images/star-on.png');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating > label:hover:before,
+.starRating > label:hover ~ label:before,
+.starRating > :checked ~ label:before{
+  opacity : 1;
+}
