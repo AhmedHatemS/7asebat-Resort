@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOOKING FORM</title>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="../jquery-ui-1.12.1/jquery-ui.min.css">
+            
+        <style>
+            @font-face
+            { 
+                font-family: "Oregano";
+                src: url('../fonts/Oregano/Oregano-Regular.ttf');
+            }
+            body
+            {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+            .main
+            {
+                background-image: url(../Images/offerx.jpg);
+                height: 607px;
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                padding-top: 50px;
+            }
+            .bookingform
+            {
+                width: 500px;
+                height: 500px;
+                margin-left: 80px;
+            }
+            h1
+            {
+                color: white;
+                line-height: 48px;
+                margin: 0 0 20px;
+                text-align: center;
+                font-family: "Oregano";
+                font-size: 60px;
+                font-weight: 100;
+            }
+            label
+            {
+                color: #cccccc;
+                font-size: 15px;
+            }
+            input
+            {
+                color: white;
+                font-family: "Oregano";
+                text-transform: uppercase;
+                width: 230px;
+                height: 20px;
+                margin-top: 7px;
+                margin-bottom: 7px;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #cccccc;
+                padding-bottom: 10px;
+                font-size: 18px;
+            }
+            .rowx
+            {
+                font-family: "Oregano";
+                text-transform: uppercase;
+                display: flex;
+                margin-top: 15px;
+            }
+            button
+            {
+                font-family: "Oregano";
+            }
+            .inputfield2
+            {
+                margin-left: 24px;
+            }
+            select 
+            {
+                width: 238px;
+                margin-top: 4px;
+                margin-bottom: 7px;
+                height: 26px;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid #cccccc;
+                margin-top: 12px;
+                font-family: "Oregano";
+                color: white;
+                font-size: 18px;
+            }
+            select:hover
+            {
+                cursor: pointer;
+            }
+            .select1,.select2
+            {
+                width: 150px;
+            }
+            option
+            {
+                font-family: "Oregano";
+                font-size: 22px;
+                color: lightseagreen;
+            }
+            input::placeholder
+            {
+                color: rgba(255,255,255,0.9);
+                font-style: italic;
+                font-size: 12px;
+            }
+            .bookingform #error_message
+            {
+                padding: 0;
+                background-color: #fe8b8e;
+                text-align: center;
+                font-family: "Oregano";
+                font-size: 15px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                font-weight: 900;
+                transition: 0.5s;
+            }
+            button 
+            {
+                margin: 0;
+                padding: 0;
+                cursor: pointer;
+                border: 1px solid white;
+                width: 130px;
+                height: 55px;
+                float: right;
+                margin-top: 20px;
+                color: white;
+                background-color: lightseagreen;
+                border: 0;
+                border-radius: 2px;
+                box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+                transition: 0.5s;
+                font-size: 20px;
+            }
+            button:hover
+            {
+                background-color: #00b3a1;
+                box-shadow: 0px 5px 7px rgba(0,0,0,0.5);
+                transition: 0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="bookingform" onsubmit="return validation()">
+                <h1>BOOK YOUR STAY</h1>
+                <div id="error_message"></div>
+                <div class="rowx">
+                    <div class="inputfield">
+                        <label for="name" id="label1">FULL NAME</label><br>
+                        <input type="text" id="name" placeholder="Enter Name">
+                    </div>
+                    <div class="inputfield2">
+                        <label for="name" id="label2">EMAIL</label><br>
+                        <input type="text" id="email" placeholder="Enter Email">
+                    </div>
+                </div>
+                
+                <div class="rowx">
+                    <div class="inputfield">
+                        <label for="phone_number" id="label3">PHONE NUMBER</label><br>
+                        <input type="text" id="phone_number" placeholder="Enter Phone Number">
+                    </div>
+                    <div class="inputfield2">
+                        <label id="label4">ROOMS</label><br>
+                        <select id="x1">
+                            <option value="1">ROOMS 1</option>
+                            <option value="2">ROOMS 2</option>
+                            <option value="3">ROOMS 3</option>
+                            <option value="4">ROOMS 4</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="rowx">
+                    <div class="inputfield">
+                        <label id="label5">ROOM TYPE</label><br>
+                        <select id="x2">
+                            <option value="1">Classic Room</option>
+                            <option value="2">Executive Room</option>
+                            <option value="3">Deluxe Suite</option>
+                            <option value="4">Executive Suite</option>
+                            <option value="5">Family Room</option>
+                            <option value="6">Deluxe Villa</option>
+                            <option value="7">Presidential Suite</option>
+                            <option value="8">Luxury Beach Villa</option>
+                            <option value="9">Pool Villa Lagoon</option>
+                        </select>
+                    </div>
+                    <div class="inputfield2">
+                        <label id="label6">PAYMENT OPTION</label><br>
+                        <select id="x3">
+                            <option value="1">VISA</option>
+                            <option value="2">MASTER CARD</option>
+                            <option value="3">AMERICAN EXPRESS</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="rowx">
+                    <div class="inputfield">
+                        <label for="date_picker1" id="label7">CHECK IN</label><br>
+                        <input type="text" id="date_picker1" class="datepicker">
+                    </div>
+                    <div class="inputfield2">
+                        <label for="date_picker2" id="label8">CHECK OUT</label><br>
+                        <input type="text" id="date_picker2" class="datepicker">
+                    </div>
+                </div>
+                
+                <div class="rowx">
+                    <div class="inputfield">
+                        <label id="label9">GUESTS</label><br>
+                        <select class="select1" id="x4">
+                            <option value="1">Adult 1</option>
+                            <option value="2">Adult 2</option>
+                            <option value="3">Adult 3</option>
+                            <option value="4">Adult 4</option>
+                        </select>
+                    </div>
+
+                    <div class="inputfield2">
+                        <label id="label10">TEENS</label><br>
+                        <select class="select2" id="x5">
+                            <option value="1">TEEN 0</option>
+                            <option value="2">TEEN 1</option>
+                            <option value="3">TEEN 2</option>
+                            <option value="4">TEEN 3</option>
+                            <option value="3">TEEN 4</option>
+                            <option value="4">TEEN 5</option>
+                        </select>
+                    </div>
+
+                    <div class="inputfield2">
+                        <label id="label11">CHILDREN (AGES 2-12)</label><br>
+                        <select class="select2" id="x6">
+                            <option value="1">Children 0</option>
+                            <option value="2">Children 1</option>
+                            <option value="3">Children 2</option>
+                            <option value="4">Children 3</option>
+                            <option value="5">Children 4</option>
+                            <option value="6">Children 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button type="submit" onclick="validation()">Book Now</button>    
+                </div>
+            </div>
+        </div>
+        <script src="../jquery-3.4.1.min.js"></script>
+        <script src="../jquery-ui-1.12.1/jquery-ui.min.js"></script>
+        <script>
+            $(function(){
+                $(".datepicker").datepicker();
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("input").focus(function(){
+                    $(this).css("border-bottom","3px solid lightseagreen");
+                });
+                $("input").blur(function(){
+                    $(this).css("border-bottom","1px solid #cccccc");
+                });
+                $("select").focus(function(){
+                    $(this).css("border-bottom","2px solid lightseagreen");
+                });
+                $("select").blur(function(){
+                    $(this).css("border-bottom","1px solid #cccccc");
+                });
+            });
+                
+            
+            $(document).ready(function(){
+                $("#name").focus(function(){
+                    $("#label1").css("color","lightseagreen");
+                });
+                $("#name").blur(function(){
+                    $("#label1").css("color","#cccccc");
+                });
+                $("#email").focus(function(){
+                    $("#label2").css("color","lightseagreen");
+                });
+                $("#email").blur(function(){
+                    $("#label2").css("color","#cccccc");
+                });
+                $("#phone_number").focus(function(){
+                    $("#label3").css("color","lightseagreen");
+                });
+                $("#phone_number").blur(function(){
+                    $("#label3").css("color","#cccccc");
+                });
+                $("#date_picker1").focus(function(){
+                    $("#label7").css("color","lightseagreen");
+                });
+                $("#date_picker1").blur(function(){
+                    $("#label7").css("color","#cccccc");
+                });
+                $("#date_picker2").focus(function(){
+                    $("#label8").css("color","lightseagreen");
+                });
+                $("#date_picker2").blur(function(){
+                    $("#label8").css("color","#cccccc");
+                });
+            });
+            
+            $(document).ready(function(){
+                $("#x1").focus(function(){
+                    $("#label4").css("color","lightseagreen");
+                });
+                $("#x1").blur(function(){
+                    $("#label4").css("color","#cccccc");
+                });
+                $("#x2").focus(function(){
+                    $("#label5").css("color","lightseagreen");
+                });
+                $("#x2").blur(function(){
+                    $("#label5").css("color","#cccccc");
+                });
+                $("#x3").focus(function(){
+                    $("#label6").css("color","lightseagreen");
+                });
+                $("#x3").blur(function(){
+                    $("#label6").css("color","#cccccc");
+                });
+                $("#x4").focus(function(){
+                    $("#label9").css("color","lightseagreen");
+                });
+                $("#x4").blur(function(){
+                    $("#label9").css("color","#cccccc");
+                });
+                $("#x5").focus(function(){
+                    $("#label10").css("color","lightseagreen");
+                });
+                $("#x5").blur(function(){
+                    $("#label10").css("color","#cccccc");
+                });
+                $("#x6").focus(function(){
+                    $("#label11").css("color","lightseagreen");
+                });
+                $("#x6").blur(function(){
+                    $("#label11").css("color","#cccccc");
+                });
+            });
+        </script>
+        <script>
+            function validation(){
+                var name=document.getElementById("name").value;
+                var phone_number=document.getElementById("phone_number").value;
+                var error_message=document.getElementById("error_message");
+                var text;
+                
+                if(name.length <10)
+                {
+                    error_message.style.padding="7px";
+                    text="Please Enter Valid Name!";
+                    error_message.innerHTML=text;
+                    return false;
+                }
+                if(isNaN(phone_number) || phone_number.length !=11)
+                {
+                    error_message.style.padding="7px";
+                    text="Please Enter Valid Phone Number!";
+                    error_message.innerHTML=text;
+                    return false;
+                }
+                alert("YOUR ROOM HAS BEEN BOOKED SUCCESSFULLY !")
+                alert("CHECK YOUR EMAIL FOR MORE DETAILS . . .")
+                return true;
+            }
+        </script>
+    </body>
+</html>

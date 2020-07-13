@@ -11,28 +11,6 @@
     width: 100%;
     height: 460px
 }
-
-body{
-padding:0;
-margin:0;
-font-family: 'Open Sans', sans-serif !important;
-}
-
-h1,h2,h3,h4,h5,h6{
-	margin:0;
-	
-}	
-p{
-	margin:0;
-
-}
-ul{
-	margin:0;
-	padding:0;
-}
-label{
-	margin:0;
-}
 /*-- main --*/
 .content{
 	padding:50px 0;
@@ -88,14 +66,10 @@ p.footer a:hover {
 	font-size:15px;	
 	color:#ccc;
 }
-.main form input[type="text"]:hover,  .main textarea:hover{
+.main form input[type="text"]:hover,  .main form input[type="email"]:hover,  .main textarea:hover{
 	border: 1px solid #4cc2c4;
 	color:#000;
 	transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
 }
 
 .main form input[type="submit"] {
@@ -116,11 +90,7 @@ p.footer a:hover {
 .main form input[type="submit"]:hover{
     background: #000;
     border-bottom:4px solid #403E3E;
-	transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;	
+	transition:0.5s all;	
 }
  .main textarea {
     width: 94%;
@@ -277,44 +247,55 @@ p.footer a:hover {
 .swit {
     margin-bottom: 30px;
 }
-span.starRating {
-    margin: 5px 0 30px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*shows the stars side by side, centered, and in reverse order than the HMTL*/
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+    margin-bottom: 15px
 }
 
-.starRating{
-  display        : inline-block;
-  width          : 7.5em;
-  height         : 1.5em;
-  overflow       : hidden;
-  vertical-align : bottom;
+/*hides the radio buttons*/
+.rating > input{ display:none;}
+
+/*style the empty stars, sets position:relative as base for pseudo-elements*/
+.rating > label {
+  position: relative;
+  width: 1.1em;
+  font-size: 35px;
+  color: #FFD700;
+  cursor: pointer;
 }
 
-.starRating > input{
-  margin-right : -100%;
-  opacity      : 0;
+/* sets filled star pseudo-elements */
+.rating > label::before{ 
+  content: "\2605"; /*star code in css*/
+  position: absolute;
+  opacity: 0;
+}
+/*overlays a filled start character to the hovered element and all previous siblings*/
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+  opacity: 1 !important;
 }
 
-.starRating > label{
-  display         : block;
-  float           : right;
-  position        : relative;
-  background      : url('../images/star-off.png');
-  background-size : contain;
+/*overlays a filled start character on the selected element and all previous siblings*/
+.rating > input:checked ~ label:before{
+  opacity:1;
 }
 
-.starRating > label:before{
-  content         : '';
-  display         : block;
-  width           : 1.5em;
-  height          : 1.5em;
-  background      : url('../images/star-on.png');
-  background-size : contain;
-  opacity         : 0;
-  transition      : opacity 0.2s linear;
-}
-
-.starRating > label:hover:before,
-.starRating > label:hover ~ label:before,
-.starRating > :checked ~ label:before{
-  opacity : 1;
-}
+/*when an element is selected and pointer re-enters the rating container, selected rate and siblings get semi transparent, as reminder of current selection*/
+.rating:hover > input:checked ~ label:before{ opacity: 0.4; }

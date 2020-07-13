@@ -6,17 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" type="text/css" href="../normalization.css">
         <link href="Feedback.css" rel="stylesheet" type="text/css" media="all" />
+        <script src=Feedback.js></script>
     </head>
     <iframe class="iframeHeader" src="../header.html" scrolling="no"></iframe>
     <body>
         <div class="content">
             <h1>Feedback us in seconds</h1>
             <div class="main">
-                <form>
+                <form name="feedbackForm" method="post">
                     <h5>Your Name</h5>
-                        <input type="text" placeholder="Example: John Marco" required="">
+                        <input type="text" placeholder="Example: John Marco" name="name">
                     <h5>Email</h5>
-                        <input type="email" placeholder="Example@gmail.com" required="">
+                        <input type="email" placeholder="Example@gmail.com" name="email">
                     <h5>Your Review <span>( Tips and Guidelines ) </span> </h5>	
                         <textarea required=""> </textarea>
                 </form>	
@@ -61,22 +62,18 @@
                             </div>
                     </div>
                 <h5>Want to rate with us for customer services?</h5>
-                    <span class="starRating">
-                        <input id="rating5" type="radio" name="rating" value="5">
-                        <label for="rating5">5</label>
-                        <input id="rating4" type="radio" name="rating" value="4">
-                        <label for="rating4">4</label>
-                        <input id="rating3" type="radio" name="rating" value="3" checked>
-                        <label for="rating3">3</label>
-                        <input id="rating2" type="radio" name="rating" value="2">
-                        <label for="rating2">2</label>
-                        <input id="rating1" type="radio" name="rating" value="1">
-                        <label for="rating1">1</label>
-                    </span>
+                <div class="rating">
+                      <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label>
+                      <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label>
+                      <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label>
+                      <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label>
+                      <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+                </div>
+
                 <form>	
                     <h5>Is there anything you would like to tell us?</h5>	
                         <textarea required="">Type here</textarea>
-                        <input type="submit" value="Send Feedback">
+                        <input type="submit" value="Send Feedback" onclick="return validateForm()">
                 </form>
             </div>
         </div>

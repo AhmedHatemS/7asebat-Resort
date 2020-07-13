@@ -5,7 +5,7 @@
 /*Make background*/
 body{
     
-    background-image: url(black.jpg);
+    background-image: url(../Images/black.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     width: 100%;
@@ -18,7 +18,7 @@ h1{
     margin-left: 40px;
     margin-bottom: 60px;
    font-size: 50px;
-   background: url("bh.jpg") 50% 50%;
+   background: url("../Images/bh.jpg") 50% 50%;
    background-size: cover;
     -webkit-text-fill-color:transparent;
     -webkit-background-clip:text;

@@ -20,7 +20,7 @@
                         </span>
                     </div>
                 </div>
-                <form class="contact100-form validate-form" method="post">
+                <form name="sendMessageForm" class="contact100-form validate-form" onsubmit="return validateForm()" method="post">
                     <label class="label-input100" for="first-name">Tell us your name *</label>
                     <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
                         <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="container-contact100-form-btn">
-                        <button type="submit" class="contact100-form-btn" onclick="myFunction()">
+                        <button type="submit" class="contact100-form-btn">
                             Send Message
                         </button>
                         <a href="home.html" style="text-decoration: none"><button type="button" class="contact100-form-btn">
