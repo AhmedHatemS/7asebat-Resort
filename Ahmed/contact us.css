@@ -160,11 +160,13 @@ iframe {
   display: block;
   font-family: Poppins-Regular;
   font-size: 40px;
-  color: lawngreen;
+  color:white;
+  background-color: black;
+  opacity: 0.5;
   line-height: 1.2;
   text-align: center;
   padding-bottom: 33px;
-  padding-top: 60%
+  padding-top: 33px;
 }
 /*------------------------------------------------------------------
 [ Input ]*/

@@ -32,51 +32,25 @@
 
 button
 {
+    width: 130px;
+    height: 70px;
     position: fixed;
     display:block;
-    font-size: 14px;
-    margin-bottom: 1.5%;
-    padding: 15px;
-    border: 5px solid;
-    background-color: whitesmoke;
+    font-size: 16px;
+    text-align: center;
+    padding: 0.5%;
+    border: 5px solid darkgray;
+    border-bottom: 20px solid darkgray;
+    border-radius: 50%;
+   background-color: lime;
+    left: 1.5%;
+    animation: mybutton 5s 1;
+    animation-direction: left-to-right;
 }
-button:focus
-{
-    background-color: navajowhite
-}
-button:focus > span
-{
-    display: none
-}
-#show
-{
-    padding-bottom: 45px;
-    top: 20%;
-    left: 0.55%
-}
-#hide
-{
-    padding-bottom: 30px;
-    top: 27%;
-    left: 1.4%
-}
-#show:focus
-{
-    padding: 15px;
-    padding-bottom: 45px
-}
-#hide:focus
-{
-    padding: 15px;
-    padding-bottom: 30px
-}
-#show:focus::after
-{
-    content: "Info enabled";
-}
-#hide:focus::after
-{
-    content: "Info hidden";
+@keyframes mybutton {
+  0%   {background: black;       top: 0%;}
+  50%  {                         top: 90%;}
+  100% {background: white;  top: 22.7%;}
 }
 
 legend
@@ -110,6 +84,7 @@ fieldset
     padding-left: 5px;
     padding-top: 2px;
     border: 0px solid;
+    display: none;
 }
 p
 {

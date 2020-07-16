@@ -183,8 +183,8 @@ p.footer a:hover {
 	left: -9999px;
 }
 .radio-btns label {
-  font-size: 14px;
-  color: #A5A5A5;
+  font-size: 16px;
+  color: dimgray;
   padding: 0px 0 0 2px;
   }
 .radio i,.radio1 i,.radio2 i,.radio3 i  {
