@@ -15,18 +15,24 @@ $(document).ready(function(){
 
 function firstClick() {
             $(".text").show();
-            document.getElementById("Span").innerHTML = "Info enabled.";
+            setTimeout(function(){
+                document.getElementById("Span").innerHTML = "Info enabled.";
+                document.getElementById("click-button").style.backgroundColor = "yellow";
+            }, 500);
             setTimeout(function(){
                 document.getElementById("Span").innerHTML = "Hide details?";
                 document.getElementById("click-button").style.backgroundColor = "red";
-            }, 1500);
+            }, 3000);
 }
 
 function secondClick() {
             $(".text").hide();
-            document.getElementById("Span").innerHTML = "Info disabled.";
+            setTimeout(function(){
+                document.getElementById("Span").innerHTML = "Info disabled.";
+                document.getElementById("click-button").style.backgroundColor = "yellow";
+            }, 500);
             setTimeout(function(){
                 document.getElementById("Span").innerHTML = "Show more?";
                 document.getElementById("click-button").style.backgroundColor = "lime";
-            }, 1500);
+            }, 3000);
 }
