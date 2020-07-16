@@ -44,16 +44,13 @@ button
     border-radius: 50%;
    background-color: lime;
     left: 1.5%;
-    animation: mybutton 15s 1;
+    animation: mybutton 5s 1;
     animation-direction: left-to-right;
 }
 @keyframes mybutton {
-  0%   {background: black;       top: 22.7%; left: 1.5%;}
-  10%  {                         top: 0%;    left: 1.5%;}
-  28.7%  {                       top: 0%;    left: 90%;}
-  60%  {                         top: 71%;   left: 90%}
-  78.7%  {                       top: 71%;   left: 1.5%}
-  100% {background: white;       top: 22.7%; left: 1.5%}
+  0%   {background: black;       top: 0%;}
+  50%  {                         top: 90%;}
+  100% {background: white;  top: 22.7%;}
 }
 
 legend
