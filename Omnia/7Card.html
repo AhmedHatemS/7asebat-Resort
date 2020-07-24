@@ -1,0 +1,44 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+     <tittle></tittle>
+     <link rel="stylesheet" href="7Card.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+  <div class="product-card7">
+      <h2> Toyota</h2>
+        <div class="stars7">
+          <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i> 
+        </div>
+      <div class="product-pic7">
+          <div class="product-color7">
+               <span class="black7 active" data-color7="#0A0A0A" data-pic7="url(../Images/t.png)"></span>
+              <span class="gray7" data-color7="#585864" data-pic7="url(../Images/t2.png)"></span>
+              <span class="brown7" data-color7="#573B1C" data-pic7="url(../Images/t3.png)"></span>
+              <span class="white7" data-color7="#FFFCFC" data-pic7="url(../Images/t4.png)"></span>
+          </div>
+      </div>
+          <div class="product-info7">
+              <div class="product-price7">$80 per hour</div>
+                  <a href="book.html" class="product-button7">BOOK NOW</a>
+          </div>
+      </div>
+       <script>
+           $(".product-color7 span").click(function(){
+              $(".product-color7 span").removeClass("active");
+              $(this).addClass("active");
+              $("body").css("background",$(this).attr(""));
+              $(".product-price7").css("color",$(this).attr("data-color7"));
+              $(".product-button7").css("color", $(this).attr("data-color7"));
+              $(".product-pic7").css("background-image",$(this).attr("data-pic7"));
+          });
+    
+      </script>
+    </body>
+</html>

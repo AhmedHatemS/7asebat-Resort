@@ -1,0 +1,43 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+     <tittle></tittle>
+     <link rel="stylesheet" href="3Card.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+  <div class="product-card3">
+       <h2>honda</h2>
+        <div class="stars3">
+          <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+      <div class="product-pic3">
+          <div class="product-color3">
+               <span class="black3 active" data-color3="#0A0A0A" data-pic3="url(../Images/hoblack.png)"></span>
+              <span class="gray3" data-color3="#585B64" data-pic3="url(../Images/hogray.png)"></span>
+              <span class="blue3" data-color3="#1728F4" data-pic3="url(../Images/hoblue.jpg)"></span>
+              <span class="white3" data-color3="#FFFCFC" data-pic3="url(../Images/howhite.png)"></span>
+          </div>
+      </div>
+          <div class="product-info3">
+              <div class="product-price3">$160 per hour</div>
+                  <a href="book.html" class="product-button3">BOOK NOW</a>
+          </div>
+      </div> 
+       <script>
+          $(".product-color3 span").click(function(){
+              $(".product-color3 span").removeClass("active");
+              $(this).addClass("active");
+              $("body").css("background",$(this).attr(""));
+              $(".product-price3").css("color",$(this).attr("data-color3"));
+              $(".product-button3").css("color", $(this).attr("data-color3"));
+              $(".product-pic3").css("background-image",$(this).attr("data-pic3"));
+          });
+          
+      </script>
+    </body>
+</html>

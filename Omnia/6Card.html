@@ -1,0 +1,44 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+     <tittle></tittle>
+     <link rel="stylesheet" href="6Card.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+  <div class="product-card6">
+      <h2>BMW</h2>
+        <div class="stars6">
+          <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i> 
+        </div>
+      <div class="product-pic6">
+          <div class="product-color6">
+               <span class="black6 active" data-color6="#0A0A0A" data-pic6="url(../Images/bmw.png)"></span>
+              <span class="red6" data-color6="#A71010" data-pic6="url(../Images/bmw2.png)"></span>
+              <span class="blue6" data-color6="#03389C" data-pic6="url(../Images/bmw3.png)"></span>
+              <span class="white6" data-color6="#FFFCFC" data-pic6="url(../Images/bmw4.png)"></span>
+          </div>
+      </div>
+          <div class="product-info6">
+              <div class="product-price6">$90 per hour</div>
+                  <a href="book.html" class="product-button6">BOOK NOW</a>
+          </div>
+      </div> 
+       <script>
+          $(".product-color6 span").click(function(){
+              $(".product-color6 span").removeClass("active");
+              $(this).addClass("active");
+              $("body").css("background",$(this).attr(""));
+              $(".product-price6").css("color",$(this).attr("data-color6"));
+              $(".product-button6").css("color", $(this).attr("data-color6"));
+              $(".product-pic6").css("background-image",$(this).attr("data-pic6"));
+          });
+           
+      </script>
+    </body>
+</html>

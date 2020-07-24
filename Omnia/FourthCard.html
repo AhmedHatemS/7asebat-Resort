@@ -1,0 +1,42 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+     <tittle></tittle>
+     <link rel="stylesheet" href="4Card.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+  <div class="product-card4">
+      <h2>jeep</h2>
+        <div class="stars4">
+          <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+        </div>
+      <div class="product-pic4">
+          <div class="product-color4">
+               <span class="black4 active" data-color4="#0A0A0A" data-pic4="url(../Images/j.png)"></span>
+              <span class="red4" data-color4="#A71010" data-pic4="url(../Images/j2.png)"></span>
+              <span class="gray4" data-color4="#585864" data-pic4="url(../Images/j3.png)"></span>
+              <span class="white4" data-color4="#FFFCFC" data-pic4="url(../Images/j4.png)"></span>
+          </div>
+      </div>
+          <div class="product-info4">
+              <div class="product-price4">$140 per hour</div>
+                  <a href="book.html" class="product-button4">BOOK NOW</a>
+          </div>
+      </div> 
+       <script>
+             $(".product-color4 span").click(function(){
+              $(".product-color4 span").removeClass("active");
+              $(this).addClass("active");
+              $("body").css("background",$(this).attr(""));
+              $(".product-price4").css("color",$(this).attr("data-color4"));
+              $(".product-button4").css("color", $(this).attr("data-color4"));
+              $(".product-pic4").css("background-image",$(this).attr("data-pic4"));
+          });
+      </script>
+    </body>
+</html>

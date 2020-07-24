@@ -5,12 +5,51 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="../Images/envelope.png"/>
-        <link rel="stylesheet" type="text/css" href="contact%20us.css">
+        <link rel="stylesheet" id="styles" href="contact%20us.css" type="text/css">
         <script src=contact%20us.js></script>
+        <style>
+            body
+            {
+                position: relative;
+            }
+            .change-theme
+            {
+                position: absolute;
+                top: 30px;
+                right: 10px;
+                width: 170px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                font-size: 14px;
+                background-color: navajowhite;
+            }
+            .change-theme:hover {
+                box-shadow: inset 0 0 0 20rem aliceblue;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script>
+                $(document).ready(function(){
+                $('#mode').click(function(){
+                if($('link#styles').attr('href')=="contact%20us.css"){
+                $('#mode').attr('value','Switch To Normal Mode')
+                $('link#styles').attr('href','contact%20us-themed.css')
+                }
+                else
+                {
+                $('#mode').attr('value','Switch To Blue Mode')
+                $('link#styles').attr('href','contact%20us.css')
+                }
+                })
+
+                });
+        </script>
     </head>
     
     <body>
         <iframe class="iframeHeader" src="../header.html" scrolling="no"></iframe>
+        <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
         <div class="container-contact100">
             <div class="wrap-contact100">
                 <div style="background-image: url('../Images/3.jpg'); background-repeat: no-repeat; background-size: cover; width: 560px">

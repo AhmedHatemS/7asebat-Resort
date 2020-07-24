@@ -1,0 +1,43 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+     <tittle></tittle>
+     <link rel="stylesheet" href="8Card.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+   <div class="product-card8">
+      <h2>Alfa Romeo</h2>
+        <div class="stars8">
+          <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i> 
+        </div>
+      <div class="product-pic8">
+          <div class="product-color8">
+               <span class="black8 active" data-color8="#0A0A0A" data-pic8="url(../Images/a2.png)" data-color9="green"></span>
+              <span class="red8" data-color8="#A71010" data-pic8="url(../Images/al.png)"></span>
+              <span class="gray8" data-color8="#585B64" data-pic8="url(../Images/a1.png)"></span>
+              <span class="white8" data-color8="#FFFCFC" data-pic8="url(../Images/a4.png)"></span>
+          </div>
+      </div>
+          <div class="product-info8">
+              <div class="product-price8">$100 per hour</div>
+                  <a href="book.html" class="product-button8">BOOK NOW</a>
+          </div>
+      </div> 
+      <script> 
+             $(".product-color8 span").click(function(){
+              $(".product-color8 span").removeClass("active");
+              $(this).addClass("active");
+              $("body").css("background",$(this).attr(""));
+              $(".product-price8").css("color",$(this).attr("data-color8"));
+              $(".product-button8").css("color", $(this).attr("data-color8"));
+              $(".product-pic8").css("background-image",$(this).attr("data-pic8"));
+          });
+         </script>
+    </body>
+</html>

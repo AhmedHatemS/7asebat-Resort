@@ -1,0 +1,44 @@
+<html>
+ <head>
+     <meta charset="utf-8">
+     <tittle></tittle>
+     <link rel="stylesheet" href="5Card.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+   <div class="product-card5">
+      <h2>Ferrari</h2>
+        <div class="stars5">
+          <i class="fa fa-star"></i>
+           <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+    
+        </div>
+      <div class="product-pic5">
+          <div class="product-color5">
+               <span class="black5 active" data-color5="#0A0A0A" data-pic5="url(../Images/f4.png)"></span>
+              <span class="red5" data-color5="#A71010" data-pic5="url(../Images/f3.png)" ></span>
+              <span class="yellow5" data-color5="#F0F402" data-pic5="url(../Images/f.png)"></span>
+              <span class="white5" data-color5="#FFFCFC" data-pic5="url(../Images/f2.png"></span>
+          </div>
+      </div>
+          <div class="product-info5">
+              <div class="product-price5">$180 per hour</div>
+                  <a href="book.html" class="product-button5">BOOK NOW</a>
+          </div>
+      </div> 
+       <script>
+        $(".product-color5 span").click(function(){
+              $(".product-color5 span").removeClass("active");
+              $(this).addClass("active");
+              $("body").css("background",$(this).attr(""));
+              $(".product-price5").css("color",$(this).attr("data-color5"));
+              $(".product-button5").css("color", $(this).attr("data-color5"));
+              $(".product-pic5").css("background-image",$(this).attr("data-pic5"));
+          });
+        
+      </script>
+    </body>
+</html>

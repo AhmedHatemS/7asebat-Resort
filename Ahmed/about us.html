@@ -8,14 +8,52 @@
         <link rel="icon" type="image/png" href="../Images/Logo.png">
         <title>7asebat resort - about us</title>
         <link rel="stylesheet" href="../normalization.css" type="text/css">
-        <link rel="stylesheet" href="about%20us.css" type="text/css">
-        
+        <link rel="stylesheet" href="about%20us.css" id="styles" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="about%20us.js"></script>
+        <style>
+            body
+            {
+                position: relative;
+            }
+            .change-theme
+            {
+                position: absolute;
+                top: 30px;
+                right: 10px;
+                width: 170px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                font-size: 14px;
+                background-color: navajowhite;
+            }
+            .change-theme:hover {
+                box-shadow: inset 0 0 0 20rem aliceblue;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script>
+                $(document).ready(function(){
+                $('#mode').click(function(){
+                if($('link#styles').attr('href')=="about%20us.css"){
+                $('#mode').attr('value','Switch To Normal Mode')
+                $('link#styles').attr('href','about%20us-themed.css')
+                }
+                else
+                {
+                $('#mode').attr('value','Switch To Blue Mode')
+                $('link#styles').attr('href','about%20us.css')
+                }
+                })
+
+                });
+        </script>
     </head>
 
     <body>
         <iframe class="iframeHeader" src="../header.html" scrolling="no"></iframe>
+        <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
         <nav class="parent">
             <div class="about">
                 <button id="click-button"><span class="infobutton" id="Span">Show more <br> info?</span></button>

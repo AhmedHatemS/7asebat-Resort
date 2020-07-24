@@ -1,0 +1,108 @@
+body
+{
+    background:url("../Images/Card.jpg");
+    
+}
+/* seconed car*/
+.product-card2
+{   width:350px;
+    background: #ecedef;
+    padding: 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    left:50%;
+    top: 50%; 
+}
+.product-card2 h2
+{  
+    color: black;
+    font-size: 35px;
+    margin-bottom: 30px;
+    
+}
+.product-pic2
+{
+    background-image: url(../Images/as3black.png);
+    width: 100%;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: -6s linear;
+}
+.product-color2{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+.product-color2 span{
+    width: 14px;
+    height: 14px;
+    margin: 0 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 160px;
+    
+}
+.black2
+{
+    background:#0A0A0A ;
+}
+.orange2
+{
+    background:#F16E18;
+}
+.gray2
+{
+    background: #585B64;
+}
+.blue2
+{
+    background: #1728F4;
+}
+.product-color2 .active:after
+{
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: #f3f3f3;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    left: -4px;
+    top:-4px;
+    z-index: -1;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3)
+  
+}
+.product-info2{
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+.product-price2{
+    color:#0A0A0A;
+    font-size: 18px;
+}
+.product-button2{
+    margin-left: auto;
+    color:black;
+    text-decoration: none;
+    border: 2px black solid;
+    padding: 8px 24px;
+    border-radius: 20px;
+    transition: 2s linear;
+    
+}
+.product-button2:hover{
+    transform: scale(1.06);
+    background-color: #999CC6;
+}
+.stars2{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: #ffcb2c;
+}
