@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="description" content="  ">
     <meta name="keywords" content="     ">
+    <!this is used for mobile beacuse they want they work on mibile first>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <!this is used for internet explorer IE Compatibility>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
     <!-- title, fill-->
@@ -14,12 +16,102 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../normalization.css" type="text/css">
 
-    <link href="places.css" rel="stylesheet">
+    <link href="places.css" rel="stylesheet" id="styles">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            position: relative;
+        }
+
+        .change-theme {
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            width: 170px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            font-size: 14px;
+            background-color: navajowhite;
+        }
+
+            .change-theme:hover {
+                box-shadow: inset 0 0 0 20rem aliceblue;
+            }
+    </style>
+    
+    <script>
+        $(document).ready(function () {
+            $('#mode').click(function () {
+                if ($('link#styles').attr('href') == "places.css") {
+                    $('#mode').attr('value', 'Switch To Normal Mode')
+                    $('link#styles').attr('href', 'places1.css')
+                }
+                else {
+                    $('#mode').attr('value', 'Switch To Blue Mode')
+                    $('link#styles').attr('href', 'places.css')
+                }
+            })
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("span").hide();
+            });
+            $("#show").click(function () {
+                $("span").show();
+            });
+        });
+        $(document).ready(function () {
+            $("#hide1").click(function () {
+                $("span").hide();
+            });
+            $("#show1").click(function () {
+                $("span").show();
+            });
+        });
+        $(document).ready(function () {
+            $("#hide2").click(function () {
+                $("span").hide();
+            });
+            $("#show2").click(function () {
+                $("span").show();
+            });
+        });
+        $(document).ready(function () {
+            $("#hide3").click(function () {
+                $("span").hide();
+            });
+            $("#show3").click(function () {
+                $("span").show();
+            });
+        });
+        $(document).ready(function () {
+            $("#hide4").click(function () {
+                $("span").hide();
+            });
+            $("#show4").click(function () {
+                $("span").show();
+            });
+        });
+        $(document).ready(function () {
+            $("#hide5").click(function () {
+                $("span").hide();
+            });
+            $("#show5").click(function () {
+                $("span").show();
+            });
+        });
+
+    </script>
 </head>
 <body>
     <iframe name="header" src="../header.html" scrolling="no"></iframe>
+    <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
     <div class="slider ">
 
     </div>
@@ -27,12 +119,15 @@
         <div class="col-3 mx-3">
             <div class="card  ">
                 <div class="front">
-                    <img class="img-fluid" src="../Images/sara.png" alt="">
+                    <img class="img-fluid" src="../Images/sara.png" alt=""><!..fluid is to make the picture responsive>
                 </div>
                 <div class="back">
                     <div class="back-content middle">
                         <h2>JABAL MOUSA</h2>
                         <span>Mountain reserve with history & wildlife.</span>
+                        <br>
+                        <button id="hide">Hide Details</button>
+                        <button id="show">Show Details</button>
                         <br />
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -40,7 +135,7 @@
                         <i class="fas fa-star"></i>
                         <i class="far fa-star"></i>
                         <br />
-                        <a class="seemore" href="Jabal%20Mousa.html" >See More</a>
+                        <a class="seemore" href="Jabal Mousa.html">See More</a>
                         <div class="sm">
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -63,10 +158,14 @@
                         </h2>
                         <span>6th-century Greek Orthodox monastery.</span>
                         <br />
+                        <button id="hide5">Hide Details</button>
+                        <button id="show5">Show Details</button>
+                        <br />
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
                         <br />
                         <a class="seemore" href="santcatrin.html">See More</a>
                         <div class="sm">
@@ -88,6 +187,9 @@
                     <div class="back-content middle">
                         <h2>RAS MUHAMMED NATIONAL PARK</h2>
                         <span>Nature reserve with beaches & diving.</span>
+                        <br>
+                        <button id="hide1">Hide Details</button>
+                        <button id="show1">Show Details</button>
                         <br />
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -117,6 +219,9 @@
                     <div class="back-content middle">
                         <h2>BLUE HOLE</h2>
                         <span>Sinkhole & tunnel, popular with divers.</span>
+                        <br>
+                        <button id="hide2">Hide Details</button>
+                        <button id="show2">Show Details</button>
                         <br />
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -150,10 +255,15 @@
                             Cathedral.
 
                         </span>
+                        <br>
+                        <button id="hide3">Hide Details</button>
+                        <button id="show3">Show Details</button>
                         <br />
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
                         <br />
                         <a class="seemore" href="cathedral.html">See More</a>
                         <div class="sm">
@@ -177,6 +287,9 @@
                             MUSTAFA MOSQUE
                         </h2>
                         <span>Architecture.</span>
+                        <br>
+                        <button id="hide4">Hide Details</button>
+                        <button id="show4">Show Details</button>
                         <br />
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -199,9 +312,9 @@
 
     </div>
 
-
+    
 
     <iframe class="footer" name="footer" src="../footer.html" scrolling="no"></iframe>
-
+    
 </body>
 </html>

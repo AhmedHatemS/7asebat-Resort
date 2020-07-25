@@ -2,157 +2,50 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="Offersxx.css" id="styles">
         <title>Offers</title>
         <style>
-            @font-face
-            { 
-                font-family: "Oregano";
-                src: url('../fonts/Oregano/Oregano-Regular.ttf');
-            }
-            @font-face
-            { 
-                font-family: "Annie Use Your Telescope";
-                src: url('../fonts/Annie_Use_Your_Telescope/AnnieUseYourTelescope-Regular.ttf');
-            }
-            @font-face
-            { 
-                font-family: "Cormorant Upright";
-                src: url('../fonts/Cormorant_Upright/CormorantUpright-Regular.ttf');
-            }
-            @font-face
-            { 
-                font-family: "Elsie";
-                src: url('../fonts/Elsie/Elsie-Regular.ttf');
-            }
-            @font-face
-            { 
-                font-family: "Kaushan Script";
-                src: url('../fonts/Kaushan_Script/KaushanScript-Regular.ttf');
-            }
-            @font-face
-            { 
-                font-family: "Niconne";
-                src: url('../fonts/Niconne/Niconne-Regular.ttf');
-            }
-            @font-face
-            { 
-                font-family: "Original Surfer";
-                src: url('../fonts/Original_Surfer/OriginalSurfer-Regular.ttf');
-            }
-            @font-face
-            { 
-                font-family: "Tangerine";
-                src: url('../fonts/Tangerine/Tangerine-Regular.ttf');
-            }
             body
             {
-                background-size: cover;
-                font-family: sans-serif;
-                padding: 0;
-                margin: 0;
-                background: #fffffa;
+                position: relative;
             }
-            .iframeHeader
+            .change-theme
             {
-                width: 100%;
-                margin: 0;
-                padding: 0;
-                height: 120px;
+                position: absolute;
+                top: 30px;
+                right: 10px;
+                width: 170px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                font-size: 14px;
+                background-color: navajowhite;
             }
-            .iframeFooter
-            {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 450px;
-            }
-            .xi
-            {
-                margin: 0 150px;
-                height: 450px;
-            }
-            .xii
-            {
-                width: 100%;
-                height: 100%;
-            }
-            .xiii
-            {
-                margin: 20px 150px 0;
-                color: #262626;
-                font-family: 'Original Surfer';
-            }
-            .title
-            {
-                margin-bottom: 0;
-                font-size: 35px;
-                margin-top: 20px;
-            }
-            .info
-            {
-                font-size: 20px;
-            }
-            .xiv
-            {
-                font-size: 30px;
-            }
-            ul
-            {
-                font-size: 20px;
-                list-style: square;
-            }
-            .price
-            {
-                font-size: 18px;
-                margin-bottom: 0;
-            }
-            span.mon
-            {
-                color: brown;
-                font-size: 25px;
-            }
-            a:hover
-            {
-                transition: 0.6s;
-                background-color: #4d4d4d;
-            }
-            a
-            {
-                display: inline-block;
-                margin: 10px 0 0;
-                padding: 10px 20px;
-                text-decoration: none;
-                font-family: 'Oregano';
-                font-size: 20px;
-                border: 1px solid dimgray;
-                color: white;
-                font-weight: 600;
-                background-color: dimgray;
-                margin-bottom: 20px;
-            }
-            .infox
-            {
-                font-size: 20px;
-                margin-bottom: 70px;
-            }
-            .pop
-            {
-                font-size: 45px;
-                margin: 0;
-            }
-            .bold
-            {
-                font-weight: 900;
-            }
-            .mini
-            {
-                margin-top: 0;
-                font-size: 12px;
+            .change-theme:hover {
+                box-shadow: inset 0 0 0 20rem aliceblue;
             }
         </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script>
+                $(document).ready(function(){
+                $('#mode').click(function(){
+                if($('link#styles').attr('href')=="Offersxx.css"){
+                $('#mode').attr('value','Switch To Normal Mode')
+                $('link#styles').attr('href','Offersxx2.css')
+                }
+                else
+                {
+                $('#mode').attr('value','Switch To Blue Mode')
+                $('link#styles').attr('href','Offersxx.css')
+                }
+                })
+
+                });
+        </script>
     </head>
     <body>
         <iframe class="iframeHeader" src="../header.html" scrolling="no"></iframe>
+        <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
         <div class="xi">
             <img class="xii" src="../Images/offerx.jpg">
         </div>

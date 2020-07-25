@@ -2,11 +2,50 @@
  <head>
      <meta charset="utf-8">
      <tittle></tittle>
-     <link rel="stylesheet" href="8Card.css">
+     <link rel="stylesheet" href="8Card.css" id="styles">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <style>
+            body
+            {
+                position: relative;
+            }
+            .change-theme
+            {
+                position: absolute;
+                top: 30px;
+                right: 10px;
+                width: 170px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                font-size: 14px;
+                background-color: navajowhite;
+            }
+            .change-theme:hover {
+                box-shadow: inset 0 0 0 20rem aliceblue;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script>
+                $(document).ready(function(){
+                $('#mode').click(function(){
+                if($('link#styles').attr('href')=="8Card.css"){
+                $('#mode').attr('value','Switch To Normal Mode')
+                $('link#styles').attr('href','8Card2.css')
+                }
+                else
+                {
+                $('#mode').attr('value','Switch To Blue Mode')
+                $('link#styles').attr('href','8Card.css')
+                }
+                })
+
+                });
+        </script>
 </head>
   <body>
+       <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
    <div class="product-card8">
       <h2>Alfa Romeo</h2>
         <div class="stars8">

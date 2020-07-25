@@ -1,0 +1,104 @@
+body {
+    margin: 0; /*⁄‘«‰ ‰ ›«œÌ «Ì „‘ﬂ·… margin default*/
+    padding: 0; /*» ‘ —Ì „”«Õ… „‰ ÃÊ… «·⁄‰’— */
+}
+body {
+    margin: 0; 
+    padding: 0; 
+}
+
+
+iframe {
+    width: 100%;
+     height: 19%
+}
+
+.footer {
+    width: 100%;
+    height: 69%;
+}
+.modal-parent{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+.modal{
+  background: white;
+  width: 70%;
+  padding: 30px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-family: arial;
+  position: relative;
+  animation: 0.5s drop;
+}
+@keyframes drop {
+  0%{
+    top: -100px;
+  }
+  100%{
+    top: 50%;
+  }
+}
+.X{
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  font-size: 40px;
+  cursor: pointer;
+
+}
+section{
+  transition: 2s;
+}
+.container {
+    position: relative; /*«·›—ﬁ »Ì‰Â« Ê»Ì‰ «·„«—Ã‰ «‰« Ê«ﬁ› ⁄ ⁄‰’— Ê«Õœ Ê›ÌÂ ⁄‰’— « ‰Ì‰ Ê›ÌÂ ⁄‰’—  ·« … »Ì“ﬁ «· »⁄œÂ ·Ê ⁄«Ê“… «“ﬁ Ê«Õœ…  ·«ﬂ· «· »Ê“Ì‘‰ »Ì»ﬁÌ ⁄ ·«Ì— ÃœÌœ Ê relative »Ì Õ—ﬂ »«·‰”»… ·‰›”Â */
+    width: 100%; /*12 col*/ /*«· absolute ÂÌ—ÊÕ · «ﬁ—» */
+}
+
+    .container .section {
+        position: sticky;
+        width: 100%;
+        height: 100vh; /*Ì⁄‰Ì 100 ›Ì «·„Ì… „‰ «Ì ‘«‘… „› ÊÕ… ﬁœ«„Ì*/
+        background: #000000;
+        top: 0; /*position*/
+    }
+
+        .container .section:nth-child(1) {
+            background: url(../Images/Moses-Mountain-4.png);
+            background-size: cover;
+        }
+
+        .container .section:nth-child(2) {
+            background: url(../Images/Moses-Mountain-1.png);
+            background-size: cover;
+        }
+
+        .container .section:nth-child(3) {
+            background: url(../Images/Moses-Mountain-2.png);
+            background-size: cover;
+        }
+
+        .container .section:nth-child(4) {
+            background: url('../Images/Moses-Mountain-3.png');
+            background-size: cover;
+        }
+
+        .container .section:nth-child(5) {
+            background: url('../Images/Moses-Mountain-44.png');
+            background-size: cover;
+        }
+
+        .container .section:nth-child(6) {
+            background: url('../Images/Moses-Mountain-5.png');
+            background-size: cover;
+        }
+
+        

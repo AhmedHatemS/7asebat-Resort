@@ -86,9 +86,7 @@ h1
 .container-fluid
 {
      background-color: black;
-
 }
-
 .col-xs-3
 {
     margin-right: 50px;
@@ -98,13 +96,11 @@ h1
     color: rgb(158, 154, 154);
     margin-left: -37px;
     transition: 0.3s;
-
 }
 .col-ms-3 h3
 {
     margin-left: 500px;
     color:rgb(158, 154,  154) ;
-    
 }
 .col-ms-3 a
 {
@@ -119,7 +115,6 @@ h1
     padding: 3px;
     transition: 0.3s;
 }
-
 .col-xs-12 img
 {
     margin-left: -43px;
@@ -227,9 +222,10 @@ h1
     padding: 5px;
     height: 600px;
     background-color: rgb(255, 255, 255);
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 20px px;
     border: 1px solid gainsboro;
     margin-bottom: 50px;
+    margin-left: 70px;
     
 }
 .middle .carousel
@@ -335,7 +331,6 @@ h1
     margin-top: 45px;
     border: 1px solid gainsboro;
 }
-}
 video.vd {
     margin-top: -70px;
     margin-left: -8px;
@@ -345,7 +340,7 @@ video.vd {
     width: 100%;
     background-color: rgb(100, 84, 39);
     height: 300px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .award p , .award h1
 {
@@ -377,4 +372,48 @@ a:focus
 a:hover
 {
   text-decoration: none;
+}
+
+#panel1{
+    display: none;
+  }
+#details1{
+    font-size: 30px;
+    margin-right: 150px;
+    color: darkblue;
+}
+#panel2{
+    display: none;
+  }
+#details2{
+    font-size: 30px;
+    margin-right: 150px;
+    color: darkblue;
+}
+#panel3{
+    display: none;
+  }
+#details3{
+    font-size: 30px;
+    margin-right: 150px;
+    color: darkblue;
+}
+body
+{
+    position: relative;
+}
+.change-theme
+{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 170px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 14px;
+    background-color: navajowhite;
+}
+.change-theme:hover {
+    box-shadow: inset 0 0 0 20rem aliceblue;
 }

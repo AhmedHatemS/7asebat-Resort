@@ -2,10 +2,46 @@
 <html>
    <head>
        <meta charset="utf-8">
-      <link rel="stylesheet" href="search.css">
+      <link rel="stylesheet" href="search.css" id="styles">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <style>
+           
+            .change-theme
+            {
+                position: absolute;
+                top: 100px;
+                right: 108px;
+                width: 170px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                font-size: 14px;
+                background-color: navajowhite;
+            }
+            .change-theme:hover {
+                box-shadow: inset 0 0 0 20rem aliceblue;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script>
+                $(document).ready(function(){
+                $('#mode').click(function(){
+                if($('link#styles').attr('href')=="search.css"){
+                $('#mode').attr('value','Switch To Normal Mode')
+                $('link#styles').attr('href','search2.css')
+                }
+                else
+                {
+                $('#mode').attr('value','Switch To Blue Mode')
+                $('link#styles').attr('href','search.css')
+                }
+                })
+
+                });
+        </script>
    </head>
    <body>
+       <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
         <a href="c.html" class="skip">See All Cars</a>
           <div class="middle">
   <form class="search-box"  method="post">

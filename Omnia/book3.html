@@ -1,10 +1,49 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="book3.css">
+        <link rel="stylesheet" href="book3.css" id="styles">
+         <style>
+            body
+            {
+                position: relative;
+            }
+            .change-theme
+            {
+                position: absolute;
+                top: 30px;
+                right: 10px;
+                width: 170px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                font-size: 14px;
+                background-color: navajowhite;
+            }
+            .change-theme:hover {
+                box-shadow: inset 0 0 0 20rem aliceblue;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+         <script>
+                $(document).ready(function(){
+                $('#mode').click(function(){
+                if($('link#styles').attr('href')=="book3.css"){
+                $('#mode').attr('value','Switch To Normal Mode')
+                $('link#styles').attr('href','Newbook3.css')
+                }
+                else
+                {
+                $('#mode').attr('value','Switch To Blue Mode')
+                $('link#styles').attr('href','book3.css')
+                }
+                })
+
+                });
+        </script>
     </head>
     <body>
         <iframe class="iframeHeader" src="../header.html" scrolling="no"></iframe>
+        <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
         <section class="section-book">
             <div class="book">
                 <div class="books-form">

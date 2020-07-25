@@ -9,13 +9,16 @@
         <meta details="HandheldFriendly" content="true">
         <title>Events 3</title>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-        <link rel="stylesheet" href="css/style2.css" type="text/css">
-        
-       
+        <link id="styles" rel="stylesheet" href="css/style2.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src="js/script2.js"></script>
         <script src="html5shiv.min.js"></script>
         <script src="respond.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body>
+        <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
         <iframe class="header" details="header" src="../header.html" ></iframe> 
         <div id="myslide" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -107,24 +110,22 @@
             </a>
           </div>
           <div class="back">
-            
             <div class="data">
              
-              <form >
+              <form action="event3.html" onsubmit="return myFunction()">
                 <h1>Booking Form</h1>
-                <input class="name" type="text" placeholder="Name*">
+                <input id="fname"  class="name" type="text" placeholder="Name*">
                 <input class="name" type="Email" placeholder="Email*" style="margin-left: 0;">
-                <input class="details" type="text" placeholder="Your Address*">
-                <input class="details" type="text" placeholder="Phone Number*">
-                <input class="details" type="text" placeholder="Type of meeting">
+                <input id="age" class="details" type="number" placeholder="Your age">
+                <input id="addr" class="details" type="text" placeholder="Your Address*">
+                <input id="phone"class="details" type="text" placeholder="Phone Number*">
+                <input class="details" type="text" placeholder="Type of party *">
                 <input class="details" type="text" placeholder="Company Name">
-                <input class="details" type="date" placeholder="enter the date">
+                <input class="details "type="date" placeholder="date of Booking/hg/gg" value="month/dat/year" name="gg">
                 <select class="details" name="type">
-                    <option>Room1</option>
-                    <option>Room2</option>
-                    <option>Room3</option>
-                    <option>Room4</option>
-                    <option>Room5</option>
+                    <option>Queen's Palace Hall</option>
+                    <option>The pearl hall</option>
+                    <option>On the Beach</option>
                 </select>
                 <input class="details" type="number" placeholder="Number of attendees">
                 <input class="det" type="text"  placeholder="Additional details you want to add about the booking" >
@@ -134,7 +135,7 @@
                 <p  style="display: inline; color:tomato ;">Our Team will contact with  you in two days to dicuss with you about The rest of the details. </p>
                 <p style="margin-left:130px; color:tomato;"> We are very happy for your choice 7asebat Resort.</p>
                   <br>
-                <input class="sum" type="submit" value="Book Now">
+                <input class="sum" type="submit" value="Book Now" >
                 
               </form>
             </div>

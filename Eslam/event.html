@@ -9,19 +9,23 @@
         <meta name="HandheldFriendly" content="true">
         <title>Events</title>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link id="styles" rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/rel.css" type="text/css">
-       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="html5shiv.min.js"></script>
         <script src="respond.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <style>
           video.vd {
-    margin-top: -70px;
-    margin-left: -8px;
-}
+            margin-top: -70px;
+            margin-left: -8px;
+          }
         </style>
+       
     </head>
     <body>
+            <input type=button id="mode" text="Switch Mode" class="change-theme" value="Switch To Blue Mode">
             <iframe class="header" name="header" src="../header.html" ></iframe> 
             <div id="myslide" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -72,8 +76,10 @@
           
           <div class="class1">
             <div class="contaiiner">
+             
               <div class="col-xs-8 col-xs-offset-1">
                 <p >THE IDEAL LOCATION FOR YOUR BUSINESS EVENT AND WEDDINGS IN SHARM EL SHEIKH</p>
+              
               </div>
               <div class="col-xs-12">
                 <h1>MEETING & EVENTS</h1>
@@ -233,7 +239,13 @@
               <div class="col-md-4" id="link">
                 <h2 style="color: tomato;">Wedding & Birthday</h2>
                 <hr class="line">
-                <p>
+                <p id="details1" class="details">
+                  
+                  <span class="glyphicon glyphicon-chevron-up"></span>
+                  click for details
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                </p>
+                <p id="panel1" class="panel">
                   With its combination of precision service, 
                   fine dining options and natural beauty,
                   the Sultan Gardens Resort aims to be the destination of<br/> choice for 
@@ -287,7 +299,13 @@
               <div class="col-md-4">
                 <h2 style="color: tomato;">Meeting Rooms</h2>
                 <hr class="line">
-                <p>
+                <p id="details2" class="datails">
+                  
+                  <span class="glyphicon glyphicon-chevron-up"></span>
+                  click for details
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                </p>
+                <p id="panel2" class="panel">
                   Great for business meetings and smaller conferences, 
                   this meeting room seats up to <br/>25
                    and is fully equipped with all necessary 
@@ -339,13 +357,17 @@
               <div class="col-md-4">
                 <h2 style="color: tomato;">Conference Halls</h2>
                 <hr class="line">
-                <p>Perfect for large meetings,presentations and International Conference
+                <p id="details3" class="details">
+                  
+                  <span class="glyphicon glyphicon-chevron-up"></span>
+                  click for details
+                  <span class="glyphicon glyphicon-chevron-down"></span>
+                </p>
+                <p id="panel3" class="panel">
+                  Perfect for large meetings,presentations and International Conference
                this halls seats up<br/> to 800 and is fully equipped with all necessary amenities 
                 including high-speed wireless<br> internet,
-                 podium, sound system, projector and more.
-
-
-                
+                 podium, sound system, projector and more.                
                 </p>
                 <button class="btn btn-warning"><a href="event4.html">BOOK NOW</a></button>
               </div>
@@ -365,11 +387,11 @@
               <img src="../Images/bb.png" alt="awards" >
             </div>  
           </div>
+         
           <iframe class="footer" name="footer" src="../footer.html" scrolling="no"></iframe>
           
           
 
-        
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/5c5b63cd5e.js" crossorigin="anonymous"></script>

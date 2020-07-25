@@ -1,16 +1,17 @@
-﻿* {
+﻿
+* {
     margin: 0;
     padding: 0;
 }
 
 iframe {
     width: 100%;
-    height: 17%;
+    height: auto;
 }
 
 .footer {
     width: 100%;
-    height: 61%;
+    height: 70%;
 }
 
 .slider {
@@ -73,6 +74,7 @@ iframe {
     backface-visibility: hidden;
     position: absolute;
     transition: transform .6s linear;
+   
     
 }
 
@@ -88,12 +90,14 @@ iframe {
     background: #f1f1f1;
     transform: perspective(600px) rotateY(180deg);
     
+    
 }
 
 .back-content {
     color: #2c3e50;
     text-align: center;
     width: 100%;
+    
     
 }
 

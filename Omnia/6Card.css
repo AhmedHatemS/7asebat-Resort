@@ -1,12 +1,14 @@
 body
 {
     background:url("../Images/Card.jpg");
+   
     
 }
 /*6 car*/
 .product-card6
 {  width:350px;
     background: #ecedef;
+  
     padding: 40px;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -97,7 +99,8 @@ body
 }
 .product-button6:hover{
     transform: scale(1.06);
-         background-color:#999CC6  ;
+     background-color:#999CC6  ;
+   
 
 }
 .stars6{
